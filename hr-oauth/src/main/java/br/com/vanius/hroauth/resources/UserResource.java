@@ -25,8 +25,11 @@ public class UserResource {
 
 			User user = service.findByEmail(email);
 			return ResponseEntity.ok(user);
+			
 		} catch (IllegalArgumentException e) {
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+			
 		}
 		
 		
