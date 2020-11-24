@@ -25,9 +25,7 @@ import br.com.vanius.hrworker.repositories.WorkerRepository;
 @RequestMapping(value = "/workers")
 public class WorkerResource {
 	
-	@Value("${test.config}")
-	private String config;
-	
+		
 	@Autowired
 	private Environment env;
 	
@@ -38,7 +36,7 @@ public class WorkerResource {
 	
 	@GetMapping(value = "/configs")
 	public ResponseEntity<Void> getConfig(){
-		logger.info("CONFIGS + "+ config);
+	//	logger.info("CONFIGS + "+ config);
 		return ResponseEntity.noContent().build();
 	}
 	
